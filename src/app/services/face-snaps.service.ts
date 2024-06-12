@@ -4,8 +4,8 @@ import { FaceSnap } from '../models/face-snap';
 @Injectable({
   providedIn: 'root',
 })
-export class faceSnapsServices {
- private faceSnaps: FaceSnap[] = [
+export class FaceSnapsService {
+  private faceSnaps: FaceSnap[] = [
     new FaceSnap(
       `L'équipe de Jump Force, c\'est fou !!`,
       `Présnetation du trio de choc`,
@@ -19,7 +19,7 @@ export class faceSnapsServices {
       `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqTydsTxqvqcGj7zp6A8_L8Ki9JcOoV0iuUQ&s`,
       new Date(),
       150
-    ),
+    ).withLocation('MarineFord'),
     new FaceSnap(
       'Japon',
       '2eme boss "Bakugo" de My Hero Academia',
@@ -29,7 +29,7 @@ export class faceSnapsServices {
     ),
   ];
 
-    getFaceSnaps(): FaceSnap[] {
-        return [...this.faceSnaps];
-    }
+  getFaceSnaps(): FaceSnap[] {
+    return [...this.faceSnaps];
+  }
 }

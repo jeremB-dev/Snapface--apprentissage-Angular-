@@ -3,4 +3,9 @@ header {
   background-color: #EEE;
   margin-bottom: 20px;
   padding: 10px;
+}
+
+img {
+  width: 400px;
+  height: 150px;
 }/*# sourceMappingURL=header.component.css.map */

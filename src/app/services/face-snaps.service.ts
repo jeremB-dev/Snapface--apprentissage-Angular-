@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FaceSnap } from '../models/face-snap';
+import { SnapType } from '../models/snap-type.type';
 
 @Injectable({
   providedIn: 'root',
@@ -7,9 +8,9 @@ import { FaceSnap } from '../models/face-snap';
 export class FaceSnapsService {
   private faceSnaps: FaceSnap[] = [
     new FaceSnap(
-      `L'équipe de Jump Force, c\'est fou !!`,
+      `L'équipe de Jump Force: la dreamteam !!`,
       `Présnetation du trio de choc`,
-      `https://xboxsquad.fr/wp-content/uploads/2019/01/Jump-force-crop-1528675323320.jpg`,
+      `https://e0.pxfuel.com/wallpapers/253/698/desktop-wallpaper-anime-jump-force-naruto-games-thumbnail.jpg`,
       new Date(),
       10
     ),
@@ -31,5 +32,15 @@ export class FaceSnapsService {
 
   getFaceSnaps(): FaceSnap[] {
     return [...this.faceSnaps];
+  }
+
+  snapFaceSnapById(faceSnapId: string, snapType: SnapType): void {
+    const foundFaceSnap: FaceSnap | undefined = this.faceSnaps.find(
+      (faceSnap: FaceSnap) => faceSnap.id === faceSnapId
+    );
+    if (!foundFaceSnap) {
+      throw new Error('FaceSnap not found!');
+    }
+    foundFaceSnap.snap(snapType);
   }
 }

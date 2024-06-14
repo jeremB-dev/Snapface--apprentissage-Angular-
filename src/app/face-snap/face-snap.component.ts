@@ -47,4 +47,6 @@ export class FaceSnapComponent implements OnInit {
     this.snapButtonText = `Oops, unSnap !!`;
     this.userHasSnapped = true;
   }
+
+  
 }

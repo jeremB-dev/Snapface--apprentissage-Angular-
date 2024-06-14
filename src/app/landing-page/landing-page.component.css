@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 64%;
+  top: 66%;
   left: 49%;
   transform: translate(-50%, -50%);
 }
@@ -15,8 +15,8 @@ p {
 }
 
 img {
-  width: 550px;
-  height: 300px;
+  width: 520px;
+  height: 280px;
   margin-bottom: 15px;
 }
 
@@ -28,4 +28,15 @@ img {
 
 a {
   text-decoration: none;
+}
+
+button {
+  position: relative;
+  left: 20px;
+  font-size: 18px;
+  box-shadow: rgb(193, 213, 241) 3px 3px 7px;
+}
+button:active {
+  transform: translate(1px, 1px);
+  box-shadow: lightgray 0 0 5px;
 }/*# sourceMappingURL=landing-page.component.css.map */

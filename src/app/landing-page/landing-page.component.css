@@ -1,12 +1,31 @@
 .landing-block {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 63%;
-  left: 50%;
+  top: 64%;
+  left: 49%;
   transform: translate(-50%, -50%);
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+img {
+  width: 550px;
+  height: 300px;
+  margin-bottom: 15px;
 }
 
 .landing-links {
   width: 100%;
   text-align: center;
   margin-top: 45px;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=landing-page.component.css.map */
